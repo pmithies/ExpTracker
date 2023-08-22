@@ -1,0 +1,17 @@
+{% load static %}
+<head>
+    <title>Expense Tracker</title>
+</head>
+
+<h1>Add Expense</h1>
+
+<form action = 'addrecord/' method = 'post'>
+    {% csrf_token %}
+    Description:<br>
+    <input name = "description">
+    <br><br>
+    Amount:<br>
+    <input name = "amount">
+    <br><br>
+    <input type = "submit" value = "Submit">
+</form>

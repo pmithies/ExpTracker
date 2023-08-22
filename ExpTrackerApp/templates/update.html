@@ -1,0 +1,16 @@
+<head>
+    <title>Expense Tracker</title>
+</head>
+
+<h1>Update Record</h1>
+
+<form action = 'UpdateRecord/{{ expenses.id }}' method = 'post'>
+    {% csrf_token %}
+    Description:<br>
+    <input name = "description" values = '{{ expenses.description }}'>
+    <br><br>
+    Amount:<br>
+    <input name = "amount" values = '{{ expenses.amount }}'>
+    <br><br>
+    <input type = 'submit' value = 'Submit'>
+</form>
